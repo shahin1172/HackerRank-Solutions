@@ -1,0 +1,15 @@
+from datetime import datetime
+def deltime(t1, t2):
+    format = "%a %d %b %Y %H:%M:%S %z"
+
+    h1 = datetime.strptime(t1,format)
+    h2 = datetime.strptime(t2,format)
+    return str(int(abs((h2-h1).total_seconds())))
+
+a=int(input())
+for i in range(a):
+    for y in range(1):
+        b1=input().strip()
+        b2=input().strip()
+
+    print(deltime(t1=b1,t2=b2),"\n")
