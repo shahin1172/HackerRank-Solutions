@@ -1,0 +1,9 @@
+from collections import Counter
+N=int(input())
+li=[]
+for i in range(N):
+    b=input()
+    li.append(b)
+a=Counter(li)
+print(len((a)))
+print(*a.values())
