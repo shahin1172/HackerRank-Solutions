@@ -1,0 +1,4 @@
+import itertools
+s=input()
+for (b,c) in itertools.groupby(s):
+    print((len((list(c))),int(b)),end=" ")
