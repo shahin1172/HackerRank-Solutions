@@ -1,3 +1,29 @@
+"""
+Problem: Word Order (HackerRank Challenge)
+
+Task:
+- You are given 'N' words. Some words may repeat. 
+- For each unique word, print the total number of distinct words.
+- Then print how many times each unique word appears in the order they were input.
+
+Input:
+    4
+    apple
+    orange
+    apple
+    banana
+
+Output:
+    3       # Number of distinct words (apple, orange, banana)
+    2 1 1   # Occurrences of each word
+
+Concepts Used:
+- Python `collections.Counter` to count occurrences of words.
+- List operations, loops, and input/output handling.
+
+
+"""
+
 from collections import Counter
 N=int(input())
 li=[]
