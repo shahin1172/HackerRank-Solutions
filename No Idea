@@ -1,0 +1,13 @@
+from array import array
+happy=0
+numbers=(input().split())
+n=array("i",map(int,input().split()))
+
+a=set(map(int,input().split()))
+b=set(map(int,input().split()))
+for i in n:
+    if i in a:
+        happy+=1
+    elif i in b:
+        happy-=1
+print(happy)
