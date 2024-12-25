@@ -1,0 +1,17 @@
+import itertools
+n=int(input())
+a=input().split()
+k=int(input())
+num=0
+b=itertools.combinations(a,k)
+c=((list(b)))
+#print(c)
+#print(len(c))
+for d in c:
+    if "a" in d:
+        
+    
+        num+=1
+#print(num)
+p=num/len(c)
+print(round(p,3))
