@@ -1,0 +1,26 @@
+from collections import deque
+
+
+def can_stack_cubes(cubes):
+    cubes = deque(cubes)
+    last_cube = float('inf')
+
+    while cubes:
+        if cubes[0] >= cubes[-1]:
+            current_cube = cubes.popleft()
+        else:
+            current_cube = cubes.pop()
+
+        if current_cube > last_cube:
+            return "No"
+
+        last_cube = current_cube
+
+    return "Yes"
+
+
+
+for _ in range(int(input())):
+    n = int(input())
+    cubes = list(map(int, input().split()))
+    print(can_stack_cubes(cubes))
