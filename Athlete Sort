@@ -1,0 +1,18 @@
+b=[]
+a=list(map(int,input().split()))
+for u in range(int(a[0])):
+    inputs=input().split()
+    b.append(inputs)
+k=int(input())
+for i in b:
+    for y in i:
+        if y.isdigit():
+            i[i.index(y)]=int(y)
+
+
+def sorting(x):
+    return (x)[k]
+
+b.sort(key=sorting)
+for d in b:
+    print(*d)
