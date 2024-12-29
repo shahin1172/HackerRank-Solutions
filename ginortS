@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def ginort(a):
+    up = []
+    lo = []
+    evendi = []
+    odddi=[]
+    for i in a:
+        if i.isalpha() and  i==i.upper():
+            up.append(i)
+        elif i.isalpha() and  i==i.lower():
+            lo.append(i)
+        elif i.isdigit() and int(i)%2==0:
+            evendi.append(i)
+        elif i.isdigit() and int(i)%2!=0:
+            odddi.append(i)
+    upper="".join(sorted(up))
+    lower="".join(sorted(lo))
+    odddigits="".join(sorted(odddi))
+    evendigits="".join(sorted(evendi))
+    print(f"{lower}{upper}{odddigits}{evendigits}")
+
+ginort(input())
